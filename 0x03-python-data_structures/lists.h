@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int is_palindrome(listint_t **head);
+
 
 /**
  * struct listint_s - singly linked list
