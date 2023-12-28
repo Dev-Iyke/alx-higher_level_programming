@@ -1,8 +1,15 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    import roman
-    def roman_to_int(roman_string):
-        if type(roman_string) != str or type(roman_string) == None:
-            return 0
-        else:
-            return (roman.fromRoman(roman_string))
+
+def roman_to_int(roman_string):
+    if type(roman_string) != str or type(roman_string) == None:
+        return 0
+    else:
+        result = 0
+        roman = {'M': 1000, 'D': 500, 'C': 100, 'L': 50, 'X': 10, 'V': 5, 'I': 1}
+        for i in reversed(roman_string):
+            num = roman[i]
+            if result < num * 5:
+                result += num
+            else:
+                result - num
+        return (result)
